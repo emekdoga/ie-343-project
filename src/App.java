@@ -19,8 +19,9 @@ public class App {
         }
         double[][] distanceMatrix = operator.distanceMatrix(facs, points);
         ArrayList<Facility> openedFacilities = new ArrayList<>();
+        int pValue = 5;
         double currentTime = System.currentTimeMillis();
-        for(int i = 0 ; i < facs.length ; i++){
+        for(int i = 0 ; i < pValue ; i++){
             Facility[] candidates = FindCandidateFacilities(openedFacilities,facs);
             Facility bestCandidate = FindBestCandidate(openedFacilities,candidates,distanceMatrix);
             openedFacilities.add(bestCandidate);
